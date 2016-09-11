@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'django',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': '947c5b47df',
         'HOST': '123.56.150.98',
         'POST':''
     },
@@ -88,7 +88,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'laravel-5-blog',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': '947c5b47df',
         'HOST': '123.56.150.98',
         'POST':''
     },
@@ -133,3 +133,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#elasticSetting
+ELASTICSEARCH = {
+    'host':'www.souii.com',
+    'port':'9200',
+}
