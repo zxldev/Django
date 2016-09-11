@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'blog.apps.BlogConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -49,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Django.urls'
+ROOT_URLCONF = 'zxldev.urls'
 
 TEMPLATES = [
     {
@@ -68,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Django.wsgi.application'
+WSGI_APPLICATION = 'zxldev.wsgi.application'
 
 
 # Database
@@ -82,9 +83,18 @@ DATABASES = {
         'PASSWORD': '',
         'HOST': '123.56.150.98',
         'POST':''
-    }
+    },
+    'blog':{
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'laravel-5-blog',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': '123.56.150.98',
+        'POST':''
+    },
 }
 
+DATABASE_ROUTERS  = ['zxldev.DbRouter.AdminRouter.AdminRouter']
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
